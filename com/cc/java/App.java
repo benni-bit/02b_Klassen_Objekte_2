@@ -4,15 +4,30 @@ public class App {
     
     public static void main(String[] args) {
 
-        Cat cat = new Cat();
-        output("Blick von aussen: " + cat);
-        output("Blick von innen: " + cat.getInstanceVariable());
+        // Instanziierung + Wertzuweisung
+        Cat cat = new Cat("Grizabella", "white", 29);
+
+        // output("Blick von aussen: " + cat);
+        // output("Blick von innen: " + cat.getInstanceVariable());
+
+        // Werte über Getter
+        output(cat.getFirstName());
+        output(cat.getFurColor());
+        output(Integer.toString(cat.getAge())); 
+
 
         output("-----------------------");
 
-        Cat cat2 = new Cat();
-        output("Blick von aussen: " + cat2);
-        output("Blick von innen: " + cat2.getInstanceVariable());
+        Cat cat2 = new Cat("Alonzo", "grey", 35);
+        // output("Blick von aussen: " + cat2);
+        // output("Blick von innen: " + cat2.getInstanceVariable());
+
+        cat2.setAge(36);  // Setter
+
+        // Werte ausgeben
+        output(cat2.getFirstName());
+        output(cat2.getFurColor());
+        output(Integer.toString(cat2.getAge()));
 
     }
 
@@ -23,4 +38,3 @@ public class App {
 
 
 }
-
