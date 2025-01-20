@@ -32,7 +32,7 @@ public class App {
     }
 
   
-    public static void output(String outputStr){
+    public static void output(String outputStr){  //static aus diesen Methoden wird nie ein Objekt erzeugt.
         System.out.println(outputStr);
     }
 
